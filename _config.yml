@@ -13,31 +13,93 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
+title: ofLiberty
+title_1: of
+title_2: Liberty
+
+slug: Planning Your Dream Greenhouse
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Description
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://greenhouse.planning.solar" # the base hostname & protocol for your site, e.g. http://example.com
+brand_url: https://solarinnovations.com
+
+# Analytics
+# gtm_id: GTM-MCG4RJC
+
+
+# Dev Details
+email: ndkline@theagora.us
+twitter_username: ndkline
+github: false
+github_username:  ndkline
+github_url: https://github.com/TheAgora/ofliberty
+
+
+
+
+sitemap:
+    filename: "/sitemap.xml"
+    exclude:
+        - "/atom.xml"
+        - "/feed.xml"
+        - "/feed/index.xml"
+    include_posts:
+        - "/index.html"
+    change_frequency_name: "change_frequency"
+    priority_name: "priority"
+
+
+
+
+
+
+# Resources
+# resources:
+#   - {title: Greenhouse Location Recommendations, path: /assets/pdf/Greenhouse-Reccomendations-Based-on-Location.pdf}
+#   - {title: Greenhouse Planning Worksheet, path: /assets/pdf/Greenhouse-Planning-Worksheet.pdf}
+#   - {title: Greenhouse Accessories, path: /assets/pdf/Greenhouse-Accessories.pdf}
+
+# Home
+vertical_height: 100 # Only supports 100 right now -- TODO
+cta_gs_url: /types
+
+# Blog
+permalink: /blog/:year/:month/:day/:title.html
+
+# Footer Settings
+footer-cta-text: Ready?
+footer-cta-link-text: Get Started
+footer-cta-link-url: /types/
+footer-cta-link-target: _blank
+footer-brand_img_url: /assets/images/white-horizontal.svg
+footer-brand_img_alt: ccc
+footer-brand_url: xxx
+
+
+## Social Accounts
+facebook: x
+twitter: x
+pinterest: x
+instagram: x
+houzz: x
+linkedin: x
+youtube: x   # channel ID
+google_plus: x
 
 # Build settings
+sass:
+  style: compressed
+# minify_html: false
 markdown: kramdown
-theme: minima
+destination: docs
+theme: solar-flair
+theme_style: two # Use 'grey' and not 'gray'
+asset_cdn: 1 # 0 = no  |  1 = yes, unminified  |  2 = yes, minified
 plugins:
   - jekyll-feed
+  # - jekyll-toc
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+collections:
+  footer-nav:
+output: false
