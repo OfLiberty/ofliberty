@@ -1,3 +1,6 @@
 [submodule "_footer-nav"]
 	path = _footer-nav
 	url = https://github.com/TheAgora/_footer-nav
+[submodule "assets"]
+	path = assets
+	url = https://github.com/TheAgora/cdn

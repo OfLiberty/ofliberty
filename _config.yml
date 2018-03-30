@@ -21,8 +21,8 @@ slug: Planning Your Dream Greenhouse
 description: >- # this means to ignore newlines until "baseurl:"
   Description
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://greenhouse.planning.solar" # the base hostname & protocol for your site, e.g. http://example.com
-brand_url: https://solarinnovations.com
+url: "https://ofliberty.org" # the base hostname & protocol for your site, e.g. http://example.com
+brand_url: https://theagora.us
 
 # Analytics
 # gtm_id: GTM-MCG4RJC
@@ -35,9 +35,6 @@ github: false
 github_username:  ndkline
 github_url: https://github.com/TheAgora/ofliberty
 
-
-
-
 sitemap:
     filename: "/sitemap.xml"
     exclude:
@@ -48,10 +45,6 @@ sitemap:
         - "/index.html"
     change_frequency_name: "change_frequency"
     priority_name: "priority"
-
-
-
-
 
 
 # Resources
@@ -94,7 +87,7 @@ sass:
 markdown: kramdown
 destination: docs
 theme: solar-flair
-theme_style: two # Use 'grey' and not 'gray'
+theme_style: three # Use 'grey' and not 'gray'
 asset_cdn: 1 # 0 = no  |  1 = yes, unminified  |  2 = yes, minified
 plugins:
   - jekyll-feed
