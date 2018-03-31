@@ -1,0 +1,48 @@
+<header role="banner">
+    {% assign pages = site.pages | sort: 'weight' %} 
+    {% assign default_paths = pages | map: "path"  %}
+    {% assign page_paths = site.header_pages | default: default_paths   %}
+
+    {% assign theme_style = page.theme_style | default: site.theme_style   %}
+    {% assign favicon = site.data.theme[theme_style].favicon    %}
+    {% assign logo = site.data.theme[theme_style].logo    %}
+    {% assign navBG = site.data.theme[theme_style].navbar-bg    %}
+    {% assign navColor = site.data.theme[theme_style].navbar-color    %}
+  
+    {% if page_paths %}
+      <nav id="mainNav"  class="navbar  navbar-expand-lg justify-content-between fixed-top navbar-{{ navColor }} bg-{{ navBG }}">
+        <a class="navbar-brand" href="{{ site.brand_url }}">
+          <img src="{{ logo }}"  height="30" alt=""></a>
+          {% if site.title_1 && site.title_2 %}
+          <a class="nav-link sitename" href="/"><span  class="grey"><small>{{ site.title_1 }}</small></span> <span class="bold {{ theme_style }} ">{{ site.title_2 }}</span> <span class="sr-only">(current)</span>
+          {% else %}
+          <a class="nav-link sitename" href="/"><span class="bold">{{ site.title }}</span> <span class="sr-only">(current)</span>
+          {% endif %}
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse " id="navbar">
+
+          <ul class="navbar-nav  ml-auto">
+          
+            
+            <form class="form-inline">
+                <button type="button" class="btn btn-outline-dark" >Sign Up</button>
+            </form>
+            <!-- <li class="nav-item"></li>
+              <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            </li>
+            
+            <li class="nav-item"></li>
+              <a class="nav-link" href="{{ site.github_url  }}" target="_blank"><span class="d-inline d-md-inline d-lg-none">Github</span> <i class="fab fa-github"></i></a>
+            </li> -->
+
+
+          </ul>
+        
+        </div>
+      </nav>
+    {% endif %}
+</header>

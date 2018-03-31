@@ -2,15 +2,20 @@
 one:  
   color: "#273C66"
   favicon: assets/logos/logo-blue-t.png
+  logo: assets/logos/logo-blue-t.png
 two: 
   color: "#307D27"
   favicon: assets/logos/logo-blue-t.png
+  logo: assets/logos/logo-blue-t.png
 three:  
   color: "#962F34"
   favicon: assets/logos/logo-blue-t.png
+  logo: assets/logos/logo-blue-t.png
 four: 
   color: "#997530"
   favicon: assets/logos/logo-blue-t.png
+  logo: assets/logos/logo-blue-t.png
 grey:  
   color: "#828282"
 favicon: assets/logos/logo-blue-t.png
+logo: assets/logos/logo-blue-t.png

@@ -5,36 +5,70 @@ layout: default
 {% assign color = page.theme_style | default: site.theme_style   %}
 {% assign favicon = site.data.theme[color].favicon    %}
 
-
-<div class="jumbotron jumbotron-fluid eq-height home-{{ color }} vh{{ site.vertical_height }}" >
-  <div class="container bottom text-center py-5">
-    <h1 class="display-5 mb-0 sr-contact">{{ site.title}}</h1>
-    <p class="lead p-1 bold sr-contact" >{{ site.slug }}</p>
-    <!-- <hr class="my-4"> -->
-    {% if site.cta_gs_url %}
-    {% if site.cta_gs_target == '_blank' %}
-    <!-- TODO: update to stable from alpha format -->
-    <button type="button" class="btn btn-primary sr-button" onclick="window.open('{{ site.cta_gs_url }}', '_blank');" >Get Started</button>
-    {% else %}    
-    <button type="button" class="btn btn-primary sr-button" onclick="location.href = '{{ site.cta_gs_url }}';" >Get Started</button>
-    {% endif %}
-    {% endif %}
-    
-    <button type="button" class="btn btn-outline-light page-scroll sr-button" href="#content">Learn More</button>
-    
+<div class="promo-wrapper sr-contact">
+  <div class="jumbotron jumbotron-fluid eq-height mb-0 home-{{ color }} vh{{ site.vertical_height }}">
+    <div class="container bottom text-center py-5 ">
+      <div class="row">
+          <div class="my-auto col-1">
+              <img src="http://ofliberty.localhost/assets/logos/logo-white-t.png" class="img-fluid">
+          </div>
+          <div class="my-auto col-7 text-left">
+              <h1 class="display-4 mb-0"><small><strong>of</strong></small>Liberty</h1>
+          </div>
+          <div class="my-auto col-4 text-right">
+                <button type="button" class="btn btn-outline-light btn-lg  page-scroll" href="#content">Learn More</button>
+            </div>
+            <!-- <div class="my-auto col-2 text-left">
+                <button type="button" class="btn btn-light btn-lg " >Sign Up</button>
+          </div> -->
+      </div>
+        <!-- https://unsplash.com/ -->
+        <!-- Photo by John Bakator on Unsplash | @jxb511 -->
+        <!-- <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="https://unsplash.com/@jxb511?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from John Bakator"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">John Bakator</span></a> -->
+        <!-- Photo by Jenna Day on Unsplash | @jennaday-->
+        <!-- <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="https://unsplash.com/@jennaday?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Jenna Day"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">Jenna Day</span></a> -->
+    </div>
   </div>
 </div>
 
+<div id="content" class="promo2-wrapper sr-contact ">
+    <div class="jumbotron jumbotron-fluid eq-height mb-0 pt-0 home-{{ color }} vh{{ site.vertical_height }}">
+      <div class="container  text-left py-5 ">
+        <div class="row pt-5">
+            
+            <div class="offset-5 col-6 blk p-4 my-auto rounded">
+              <h2>What is <small>of</small>Liberty</h2>
+              <p><small>of</small>Liberty is a group of developers, writers, teachers, and anyone who is interested in leveraging their skills and knowledge to enhance democracy.</p>
+              <p><strong>Our first project</strong></p>
+              <p>Many mainstream and everyday websites have been blacklisting gun related topics.</p>
+              <p>Our aim is to first develop a news aggregate and community for gun related topics; gun rights, sales, legislation, and education.</p>
+              
+              <button type="button" class="mt-2 btn btn-outline-light btn-lg float-right page-scroll" href="#start">Where to Begin?</button>
+              
+            </div>
+              <!-- <div class="my-auto col-2 text-left">
+                  <button type="button" class="btn btn-light btn-lg " >Sign Up</button>
+            </div> -->
+        </div>
+          <!-- https://unsplash.com/ -->
+          <!-- Photo by John Bakator on Unsplash | @jxb511 -->
+          <!-- <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="https://unsplash.com/@jxb511?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from John Bakator"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">John Bakator</span></a> -->
+          <!-- Photo by Jenna Day on Unsplash | @jennaday-->
+          <!-- <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="https://unsplash.com/@jennaday?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Jenna Day"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">Jenna Day</span></a> -->
+      </div>
+    </div>
+  </div>
 
-<section id="content" class="mt-10">
-  <div class="container-fluid whatare">
-    <div class="container" >
-      <div class="row h-100 py-5" style="margin:3% 0px;">
+<section id="start" class="pt-5" style="background: white;">
+  <div class="container-fluid whatare pt-5">
+    <div  class="container" >
+      <div class="row h-100 py-5" >
         <div class="col-12 col-md-6 my-auto">
-          <h2>What is Solar Flair</h2>
-          <p>Solar Flair is an open source project and the <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> theme that <a href="https://solarinnovations.com" target="_blank">Solar Innovations</a> uses accross their <a href="https://planning.solar" target="_blank">Planning.Solar</a> websites.</p>
-          <p>The theme is designed to have 4 primary branding colors that can be toggled on/off through the config file.</p>
-          <p>This demo site shows all four different theme styles.</p>
+          <h2>What is <small>of</small>Liberty</h2>
+          <p><small>of</small>Liberty is a group of developers, writers, teachers, and anyone who is interested in leveraging their skills and knowledge to enhance democracy.</p>
+          <p><strong>Our first project</strong></p>
+          <p>Many mainstream and everyday websites have been demonitizing and blacklisting gun related topics.</p>
+          <p>Our aim is to first develop a news aggregate and community for gun related topics; gun rights, sales, legislation, and education.</p>
         </div>
         <div class="col-12 col-md-6  my-auto text-center ">
             

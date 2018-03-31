@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+{% assign theme_style = page.theme_style | default: site.theme_style   %}
+
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body class="{{ theme_style }}">
+   
+    
+    {% include header.html %}
+
+   
+    {{ content }}
+     
+
+    {% assign footer = page.footer | default: 1  %}    
+    {% if footer == 1 %}
+      {% include footer.html %}
+    {% endif %}
+
+  </body>
+
+</html>
