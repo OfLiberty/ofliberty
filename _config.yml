@@ -61,18 +61,18 @@ cta_gs_url: /types
 permalink: /blog/:year/:month/:day/:title.html
 
 # Footer Settings
-footer-cta-text: Ready?
+footer-cta-text: Add yourself to the waitlist!
 footer-cta-link-text: Get Started
-footer-cta-link-url: /types/
-footer-cta-link-target: _blank
-footer-brand_img_url: /assets/images/white-horizontal.svg
-footer-brand_img_alt: ccc
-footer-brand_url: xxx
+footer-cta-link-url: /sign-up
+footer-cta-link-target: null
+footer-brand_img_url: /assets/logos/logo-white-t.png
+footer-brand_img_alt: theagora
+footer-brand_url: /sign-up
 
 
 ## Social Accounts
 facebook: x
-twitter: x
+twitter: https://twitter.com/ofLibertyBot
 pinterest: x
 instagram: x
 houzz: x
