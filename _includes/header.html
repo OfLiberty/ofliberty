@@ -11,7 +11,7 @@
   
     {% if page_paths %}
       <nav id="mainNav"  class="navbar  navbar-expand-lg justify-content-between fixed-top navbar-{{ navColor }} bg-{{ navBG }}">
-        <a class="navbar-brand" href="{{ site.brand_url }}">
+        <a class="navbar-brand" href="/">
           <img src="{{ logo }}"  height="30" alt=""></a>
           {% if site.title_1 && site.title_2 %}
           <a class="nav-link sitename" href="/"><span  class="grey"><small>{{ site.title_1 }}</small></span> <span class="bold {{ theme_style }} ">{{ site.title_2 }}</span> <span class="sr-only">(current)</span>
@@ -19,24 +19,26 @@
           <a class="nav-link sitename" href="/"><span class="bold">{{ site.title }}</span> <span class="sr-only">(current)</span>
           {% endif %}
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-        </button>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> -->
+          <!-- <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span><form class="form-inline mx-auto"> -->
+                <!-- <button type="button" class="btn btn-outline-dark" onclick="location.href = '/sign-up';">Sign Up</button>
+              </form>
+        </button> -->
   
-        <div class="collapse navbar-collapse " id="navbar">
-
-          <ul class="navbar-nav  ml-auto">
-          
-            
-            <form class="form-inline mx-auto">
-                <button type="button" class="btn btn-outline-dark" onclick="location.href = '/signup';">Sign Up</button>
-            </form>
-          
-
-
-          </ul>
+        <ul class="navbar-nav">
         
-        </div>
+          
+          <form class="form-inline ">
+              <button type="button" class="btn btn-outline-dark" onclick="location.href = '/sign-up';">Sign Up</button>
+          </form>
+        
+
+
+        </ul>
+        <!-- <div class="collapse navbar-collapse " id="navbar">
+
+        
+        </div> -->
       </nav>
     {% endif %}
 </header>
