@@ -11,12 +11,12 @@
   
     {% if page_paths %}
       <nav id="mainNav"  class="navbar  navbar-expand-lg justify-content-between fixed-top navbar-{{ navColor }} bg-{{ navBG }}">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" style="width: 90.2px; margin-right: 0px;" href="/">
           <img src="{{ logo }}"  height="30" alt=""></a>
           {% if site.title_1 && site.title_2 %}
-          <a class="nav-link sitename" href="/"><span  class="grey"><small>{{ site.title_1 }}</small></span> <span class="bold {{ theme_style }} ">{{ site.title_2 }}</span> <span class="sr-only">(current)</span>
+          <a class="mx-auto nav-link sitename" href="/"><span  class="grey"><small>{{ site.title_1 }}</small></span> <span class="bold {{ theme_style }} ">{{ site.title_2 }}</span> <span class="sr-only">(current)</span>
           {% else %}
-          <a class="nav-link sitename" href="/"><span class="bold">{{ site.title }}</span> <span class="sr-only">(current)</span>
+          <a class="mx-auto nav-link sitename" href="/"><span class="bold">{{ site.title }}</span> <span class="sr-only">(current)</span>
           {% endif %}
         </a>
         <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> -->
@@ -25,16 +25,16 @@
               </form>
         </button> -->
   
-        <ul class="navbar-nav">
+        <!-- <ul class="navbar-nav">
         
-          
+           -->
           <form class="form-inline ">
               <button type="button" class="btn btn-outline-dark" onclick="location.href = '/sign-up';">Sign Up</button>
           </form>
         
 
 
-        </ul>
+        <!-- </ul> -->
         <!-- <div class="collapse navbar-collapse " id="navbar">
 
         
